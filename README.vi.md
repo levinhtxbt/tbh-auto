@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/phi%C3%AAn%20b%E1%BA%A3n-1.0.5-2ea44f?style=flat-square" alt="phiên bản 1.0.5"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/phi%C3%AAn%20b%E1%BA%A3n-1.0.6-2ea44f?style=flat-square" alt="phiên bản 1.0.6"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/giao%20di%E1%BB%87n-Ti%E1%BA%BFng%20Vi%E1%BB%87t%20%7C%20English-f39c12?style=flat-square" alt="Giao diện: Tiếng Việt | English">
   <img src="https://img.shields.io/badge/gi%C3%A1-mi%E1%BB%85n%20ph%C3%AD-brightgreen?style=flat-square" alt="miễn phí">
@@ -16,10 +16,10 @@
 
 **tbh-auto** giữ cho *TBH: Task Bar Hero* luôn gọn gàng khi bạn treo máy. Tool tự mở rương khi rơi ra, chuyển đồ từ túi vào kho rồi sort cả hai, để túi không bao giờ bị đầy.
 
-Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không đọc memory, không inject vào game, không đụng network, và chỉ *đọc* file save, không bao giờ ghi.
+Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không đọc memory, không inject vào game, không đụng network của game, và chỉ *đọc* file save, không bao giờ ghi. Kết nối duy nhất tool tạo ra là tới GitHub để kiểm tra bản mới, và bạn có thể tắt nó.
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-tbh--auto--setup--1.0.5.exe-2ea44f?style=for-the-badge" alt="Tải về tbh-auto-setup-1.0.5.exe"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-tbh--auto--setup--1.0.6.exe-2ea44f?style=for-the-badge" alt="Tải về tbh-auto-setup-1.0.6.exe"></a>
   <br>
   <sub>~73 MB · Windows 10 / 11 64-bit (cả máy ARM) · không cần Python, không cần quyền admin · <a href="CHANGELOG.md">Có gì mới</a> · <a href="https://github.com/levinhtxbt/tbh-auto/releases">Releases</a></sub>
 </p>
@@ -59,6 +59,7 @@ Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không
 | 📊 | **Xem file save** | Xem đội hình, chỉ số hero, kỹ năng, đồ đang mặc, từng tab kho, túi, vàng, stage, cấp Cube. Mọi thứ đọc từ file save; icon đồ lấy từ game đã cài trên máy bạn. |
 | 🌐 | **Tiếng Việt & English** | Một click đổi cả giao diện, kể cả tên đồ và tên hero. |
 | 🐞 | **Báo lỗi có sẵn** | Soạn sẵn báo cáo lỗi để bạn gửi lên GitHub hoặc qua email; tên user Windows được ẩn. |
+| 🔄 | **Tự cập nhật** | Báo khi có bản mới và cho xem có gì thay đổi. Một click là tool tải về, kiểm tra SHA256, cài đè lên bản đang dùng rồi tự mở lại. |
 
 ## 🧭 Các menu
 
@@ -84,11 +85,13 @@ Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không
 | | Remote Desktop › Đóng Remote Desktop ngay, bot vẫn chạy | Chuyển phiên như trên, nhưng làm ngay lập tức. |
 | **Logs** | Xoá log · Mở file log · Tự cuộn · Chi tiết (DEBUG) | Các tuỳ chọn cho khung log. Log luôn bằng tiếng Anh. |
 | **Trợ giúp** | Báo lỗi / góp ý... | Điền sẵn báo cáo gồm phiên bản, màn hình, trạng thái bot và 80 dòng log cuối. Sau đó bạn tự mở issue GitHub hoặc gửi email; app không tự gửi gì. |
+| | Kiểm tra cập nhật... | Hỏi GitHub bản mới nhất. Nếu có bản mới hơn thì cho xem có gì thay đổi và nút **Cập nhật ngay**: tải về, kiểm tra SHA256, cài đè lên bản này (giữ `config.yml` và các cài đặt) rồi mở bản mới. |
+| | Tự kiểm tra cập nhật khi mở app | Mặc định bật. Kiểm tra lúc mở app, tối đa 6 tiếng một lần, và chỉ lên tiếng khi có bản mới. |
 | | Giới thiệu... · Ủng hộ (Donate)... | |
 
 ## 🚀 Cách sử dụng
 
-1. **Cài đặt.** Tải [`tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe) rồi chạy.
+1. **Cài đặt.** Tải [`tbh-auto-setup-1.0.6.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe) rồi chạy.
    - Nếu SmartScreen hiện *Windows protected your PC*, bấm **More info → Run anyway**. Exe chưa được ký số.
    - Giữ thư mục cài mặc định, hoặc chọn thư mục khác như `C:\tbh-auto`. Không chọn được Program Files.
    - Tick **Get item icons & hero names from the installed game**.
@@ -96,7 +99,7 @@ Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không
 3. **Dò nút.** Mở tbh-auto, bấm **🔍 Dò nút**. Log ghi mức zoom UI và từng nút tìm được. Dòng nào màu cam thường là do cửa sổ cần dùng đang đóng hoặc bị che.
 4. **Chạy.** Bấm **▶ Chạy bot**, chấm trạng thái chuyển xanh. Muốn dừng thì bấm **■ Dừng**, hoặc kéo chuột vào góc trên bên trái màn hình.
 
-**Cập nhật**: chạy bộ cài bản mới đè lên bản cũ; `config.yml` và các cài đặt được giữ nguyên. **Gỡ cài đặt**: vào *Settings → Apps → Installed apps → tbh-auto*. Cài đặt nâng cao (delay, phím mở cửa sổ Hero, bật / tắt từng tính năng) nằm trong `config.yml` ở thư mục cài, mỗi dòng đều có chú thích.
+**Cập nhật**: bấm **Cập nhật ngay** khi tbh-auto báo có bản mới, hoặc vào **Trợ giúp → Kiểm tra cập nhật...**. Bạn cũng có thể tự chạy bộ cài bản mới đè lên bản cũ. Cách nào thì `config.yml` và các cài đặt cũng được giữ nguyên. **Gỡ cài đặt**: vào *Settings → Apps → Installed apps → tbh-auto*. Cài đặt nâng cao (delay, phím mở cửa sổ Hero, bật / tắt từng tính năng) nằm trong `config.yml` ở thư mục cài, mỗi dòng đều có chú thích.
 
 > [!NOTE]
 > Trên máy bật **Smart App Control** (thường gặp ở Windows 11 mới cài), Windows chặn hẳn chương trình chưa ký số: *"An Application Control policy has blocked this file"*. Khi đó không có nút Run anyway.
@@ -105,8 +108,8 @@ Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không
 <summary>Kiểm tra file tải về (SHA256)</summary>
 
 ```powershell
-Get-FileHash .\tbh-auto-setup-1.0.5.exe -Algorithm SHA256
-# 0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570
+Get-FileHash .\tbh-auto-setup-1.0.6.exe -Algorithm SHA256
+# c7cb51e592221f76390712f4e0d5b4f8e281be0a842ddb994025a8b211caf59e
 ```
 
 </details>

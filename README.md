@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/version-1.0.5-2ea44f?style=flat-square" alt="version 1.0.5"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/version-1.0.6-2ea44f?style=flat-square" alt="version 1.0.6"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/UI-English%20%7C%20Vietnamese-f39c12?style=flat-square" alt="UI: English | Vietnamese">
   <img src="https://img.shields.io/badge/price-free-brightgreen?style=flat-square" alt="free">
@@ -16,10 +16,10 @@
 
 **tbh-auto** keeps *TBH: Task Bar Hero* tidy while you idle. It opens chests as they drop, moves the loot from your bag into the stash, and sorts both, so your bag never fills up.
 
-It only **looks at the screen** and **clicks like a person**. It does not read game memory, inject code or touch network traffic, and it only ever *reads* the save file.
+It only **looks at the screen** and **clicks like a person**. It does not read game memory, inject code or touch the game's network traffic, and it only ever *reads* the save file. The only connection it makes is to GitHub, to check for a newer version, and you can turn that off.
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/Download-tbh--auto--setup--1.0.5.exe-2ea44f?style=for-the-badge" alt="Download tbh-auto-setup-1.0.5.exe"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/Download-tbh--auto--setup--1.0.6.exe-2ea44f?style=for-the-badge" alt="Download tbh-auto-setup-1.0.6.exe"></a>
   <br>
   <sub>~73 MB · Windows 10 / 11 64-bit (ARM too) · no Python, no admin rights · <a href="CHANGELOG.md">What's new</a> · <a href="https://github.com/levinhtxbt/tbh-auto/releases">Releases</a></sub>
 </p>
@@ -59,6 +59,7 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 | 📊 | **Save viewer** | Shows your party, hero stats, skills and gear, every stash tab, the bag, gold, stage and Cube level. Everything comes from the save file, and the item icons come from your installed game. |
 | 🌐 | **English & Vietnamese** | One click switches the whole UI, including item and hero names. |
 | 🐞 | **Built-in bug report** | Writes a bug report for you to post on GitHub or e-mail, with your Windows user name hidden. |
+| 🔄 | **Updates itself** | Tells you when a new version is out and shows what changed. One click downloads it, checks its SHA256, installs it over your version and opens it again. |
 
 ## 🧭 Menus
 
@@ -84,11 +85,13 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 | | Remote Desktop › Close Remote Desktop now, keep the bot running | Does the same handover right away. |
 | **Logs** | Clear log · Open log file · Auto-scroll · Verbose (DEBUG) | Controls the log panel. The log is always in English. |
 | **Help** | Report an issue... | Fills in a report with the versions, screen, bot state and the last 80 log lines. You then open a GitHub issue or send an e-mail yourself; nothing is sent automatically. |
+| | Check for updates... | Asks GitHub for the latest version. If there is a newer one, shows what changed and offers **Update now**: download, check the SHA256, install over this version (keeping `config.yml` and your settings) and open the new version. |
+| | Check for updates when the app starts | On by default. Checks at start-up, at most every 6 hours, and only speaks up when there is a new version. |
 | | About... · Donate... | |
 
 ## 🚀 How to use
 
-1. **Install.** Download [`tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe) and run it.
+1. **Install.** Download [`tbh-auto-setup-1.0.6.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe) and run it.
    - If SmartScreen says *Windows protected your PC*, click **More info → Run anyway**. The exe is not code-signed.
    - Keep the default install folder, or pick one like `C:\tbh-auto`. Program Files is not allowed.
    - Tick **Get item icons & hero names from the installed game**.
@@ -96,7 +99,7 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 3. **Scan.** Open tbh-auto and click **🔍 Scan buttons**. The log shows the UI zoom and every button found. If a line is orange, the window it needs is usually closed or covered.
 4. **Run.** Click **▶ Start bot**; the status dot turns green. To stop, click **■ Stop** or move the mouse into the top-left corner of the screen.
 
-**To update**, run the newer installer over the old one. It keeps `config.yml` and your settings. **To uninstall**, go to *Settings → Apps → Installed apps → tbh-auto*. Advanced settings (delays, the Hero window hotkey, turning features on or off) are in `config.yml` in the install folder, and every line in it is commented.
+**To update**, click **Update now** when tbh-auto says a new version is out, or use **Help → Check for updates...**. You can also run a newer installer over the old one yourself. Either way `config.yml` and your settings are kept. **To uninstall**, go to *Settings → Apps → Installed apps → tbh-auto*. Advanced settings (delays, the Hero window hotkey, turning features on or off) are in `config.yml` in the install folder, and every line in it is commented.
 
 > [!NOTE]
 > On a PC with **Smart App Control** turned on (common on fresh Windows 11 installs), Windows blocks unsigned programs outright: *"An Application Control policy has blocked this file"*. There is no Run anyway button in that case.
@@ -105,8 +108,8 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 <summary>Check the download (SHA256)</summary>
 
 ```powershell
-Get-FileHash .\tbh-auto-setup-1.0.5.exe -Algorithm SHA256
-# 0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570
+Get-FileHash .\tbh-auto-setup-1.0.6.exe -Algorithm SHA256
+# c7cb51e592221f76390712f4e0d5b4f8e281be0a842ddb994025a8b211caf59e
 ```
 
 </details>

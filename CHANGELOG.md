@@ -5,9 +5,31 @@
 Installers are attached to each [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). To update, run the newer one over your version; your settings are kept.
 Bộ cài được đính kèm trong từng [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). Muốn cập nhật thì chạy bộ cài mới đè lên bản đang dùng; cài đặt được giữ nguyên.
 
+## 1.0.6 · 2026-10-02
+
+[⬇ `tbh-auto-setup-1.0.6.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe) · SHA256 `c7cb51e592221f76390712f4e0d5b4f8e281be0a842ddb994025a8b211caf59e`
+
+### <img src="assets/flag_en.png" height="12" alt=""> English
+
+**New**
+
+- 🔄 **tbh-auto updates itself.** At start-up (at most every 6 hours) and with *Help → Check for updates...*, it asks GitHub for the latest version. When a newer one is out, it shows what changed and offers **Update now**. That downloads the installer, checks its SHA256, installs it over your version (keeping `config.yml` and your settings) and opens the new version. Turn off the start-up check with *Help → Check for updates when the app starts*. This is the only connection tbh-auto makes.
+- 📦 Installers are now attached to [GitHub Releases](https://github.com/levinhtxbt/tbh-auto/releases) instead of being stored in the repository.
+
+Also contains the Cube fix of 1.0.5 below. Coming from 1.0.5 or older, install this version by hand once; after that, updates come through the app.
+
+### <img src="assets/flag_vi.png" height="12" alt=""> Tiếng Việt
+
+**Mới**
+
+- 🔄 **tbh-auto tự cập nhật.** Khi mở app (tối đa 6 tiếng một lần) và khi chọn *Trợ giúp → Kiểm tra cập nhật...*, app hỏi GitHub bản mới nhất. Nếu có bản mới hơn, app cho xem có gì thay đổi và nút **Cập nhật ngay**. Nút này tải bộ cài, kiểm tra SHA256, cài đè lên bản đang dùng (giữ `config.yml` và các cài đặt) rồi mở bản mới. Tắt tự kiểm tra bằng *Trợ giúp → Tự kiểm tra cập nhật khi mở app*. Đây là kết nối duy nhất mà tbh-auto tạo ra.
+- 📦 Bộ cài giờ được đính kèm trong [GitHub Releases](https://github.com/levinhtxbt/tbh-auto/releases) thay vì lưu trong repo.
+
+Bản này có cả bản sửa Cube của 1.0.5 bên dưới. Nếu đang dùng 1.0.5 trở về trước, hãy tự cài bản này một lần; từ đó trở đi app tự cập nhật.
+
 ## 1.0.5 · 2026-10-02
 
-[⬇ `tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe) · SHA256 `0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570`
+*Replaced by 1.0.6, which contains this fix; no separate download. · Đã được thay bằng 1.0.6 (có bản sửa này); không còn tải riêng.*
 
 ### <img src="assets/flag_en.png" height="12" alt=""> English
 
