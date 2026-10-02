@@ -5,6 +5,28 @@
 Installers are attached to each [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). To update, run the newer one over your version; your settings are kept.
 Bộ cài được đính kèm trong từng [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). Muốn cập nhật thì chạy bộ cài mới đè lên bản đang dùng; cài đặt được giữ nguyên.
 
+## 1.0.7 · 2026-10-02
+
+[⬇ `tbh-auto-setup-1.0.7.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.7/tbh-auto-setup-1.0.7.exe) · SHA256 `9e096275b8aef28a7e08e669b5eb3240832229bd730411ba20574b5d5e5a138d`
+
+### <img src="assets/flag_en.png" height="12" alt=""> English
+
+**Fixed**
+
+- ⚗️ **Cube synthesis no longer skips a run when the Cube opens on another recipe.** The Cube reopens on the recipe used last (Crafting, Alchemy, Corrosion, ...), and the bot used to log a warning and do nothing. Now it picks Synthesis by itself and checks every step on screen:
+  - It opens the recipe list and clicks the dropdown again if the list did not open.
+  - It picks Synthesis and checks the blue gem next to the recipe name.
+  - It tries up to 3 times. If Synthesis still cannot be picked, it saves what it saw to `debug/` (named in the log), closes the list and the Cube, and tries again on the next run.
+
+### <img src="assets/flag_vi.png" height="12" alt=""> Tiếng Việt
+
+**Sửa**
+
+- ⚗️ **Tổng hợp Cube không còn bỏ lượt khi Cube mở ra ở công thức khác.** Cube mở lại ở công thức dùng lần trước (Chế tạo, Giả kim, Ăn mòn...), và bot cũ chỉ ghi cảnh báo rồi không làm gì. Giờ bot tự chọn Tổng hợp và kiểm tra từng bước trên màn hình:
+  - Bot mở danh sách công thức, và bấm lại menu nếu danh sách chưa mở.
+  - Bot chọn Tổng hợp rồi kiểm tra viên ngọc xanh cạnh tên công thức.
+  - Bot thử tối đa 3 lần. Nếu vẫn không chọn được, bot lưu ảnh màn hình vào `debug/` (đường dẫn ghi trong log), đóng danh sách và Cube, rồi thử lại ở lượt sau.
+
 ## 1.0.6 · 2026-10-02
 
 [⬇ `tbh-auto-setup-1.0.6.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe) · SHA256 `c7cb51e592221f76390712f4e0d5b4f8e281be0a842ddb994025a8b211caf59e`

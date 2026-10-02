@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/version-1.0.6-2ea44f?style=flat-square" alt="version 1.0.6"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.7/tbh-auto-setup-1.0.7.exe"><img src="https://img.shields.io/badge/version-1.0.7-2ea44f?style=flat-square" alt="version 1.0.7"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/UI-English%20%7C%20Vietnamese-f39c12?style=flat-square" alt="UI: English | Vietnamese">
   <img src="https://img.shields.io/badge/price-free-brightgreen?style=flat-square" alt="free">
@@ -19,7 +19,7 @@
 It only **looks at the screen** and **clicks like a person**. It does not read game memory, inject code or touch the game's network traffic, and it only ever *reads* the save file. The only connection it makes is to GitHub, to check for a newer version, and you can turn that off.
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe"><img src="https://img.shields.io/badge/Download-tbh--auto--setup--1.0.6.exe-2ea44f?style=for-the-badge" alt="Download tbh-auto-setup-1.0.6.exe"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.7/tbh-auto-setup-1.0.7.exe"><img src="https://img.shields.io/badge/Download-tbh--auto--setup--1.0.7.exe-2ea44f?style=for-the-badge" alt="Download tbh-auto-setup-1.0.7.exe"></a>
   <br>
   <sub>~73 MB · Windows 10 / 11 64-bit (ARM too) · no Python, no admin rights · <a href="CHANGELOG.md">What's new</a> · <a href="https://github.com/levinhtxbt/tbh-auto/releases">Releases</a></sub>
 </p>
@@ -91,7 +91,7 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 
 ## 🚀 How to use
 
-1. **Install.** Download [`tbh-auto-setup-1.0.6.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.6/tbh-auto-setup-1.0.6.exe) and run it.
+1. **Install.** Download [`tbh-auto-setup-1.0.7.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.7/tbh-auto-setup-1.0.7.exe) and run it.
    - If SmartScreen says *Windows protected your PC*, click **More info → Run anyway**. The exe is not code-signed.
    - Keep the default install folder, or pick one like `C:\tbh-auto`. Program Files is not allowed.
    - Tick **Get item icons & hero names from the installed game**.
@@ -108,8 +108,8 @@ It only **looks at the screen** and **clicks like a person**. It does not read g
 <summary>Check the download (SHA256)</summary>
 
 ```powershell
-Get-FileHash .\tbh-auto-setup-1.0.6.exe -Algorithm SHA256
-# c7cb51e592221f76390712f4e0d5b4f8e281be0a842ddb994025a8b211caf59e
+Get-FileHash .\tbh-auto-setup-1.0.7.exe -Algorithm SHA256
+# 9e096275b8aef28a7e08e669b5eb3240832229bd730411ba20574b5d5e5a138d
 ```
 
 </details>
