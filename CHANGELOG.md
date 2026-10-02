@@ -5,6 +5,28 @@
 Installers for every version are in [`installers/`](installers/). To update, run the newer installer over the old one; your settings are kept.
 Bộ cài từng phiên bản nằm trong [`installers/`](installers/). Muốn cập nhật thì chạy bộ cài mới đè lên bản cũ; cài đặt được giữ nguyên.
 
+## 1.0.5 · 2026-10-02
+
+[⬇ `tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.5.exe) · SHA256 `0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570`
+
+### <img src="assets/flag_en.png" height="12" alt=""> English
+
+**Fixed**
+
+- ⚗️ **Cube synthesis no longer skips good sets** right after a synthesis, which showed up in the log as *"Auto Fill put in COMMON, empty"*. The bot read the 9 cells while the Cube was still flashing white, and the flash looked like Common items. The fix has three parts:
+  - The bot waits an extra 0.5 s after Auto Fill and after ↶ for the flash to fade. This is the new `timing.cube_settle` setting in `config.yml`; raise it on a slow VPS.
+  - It reads the cells only once two looks in a row agree, and never takes the white flash for Common items.
+  - If the grid is still only partly filled or mixed, it takes the items out and runs Auto Fill once more before giving up.
+
+### <img src="assets/flag_vi.png" height="12" alt=""> Tiếng Việt
+
+**Sửa**
+
+- ⚗️ **Tổng hợp Cube không còn bỏ qua bộ hợp lệ** ngay sau một lần tổng hợp. Trong log lỗi này hiện ra là *"Auto Fill put in COMMON, empty"*. Nguyên nhân là bot đọc 9 ô khi Cube còn đang nháy trắng, và ô nháy trắng trông giống đồ Common. Bản sửa gồm ba phần:
+  - Bot chờ thêm 0,5 giây sau Auto Fill và sau ↶ cho hiệu ứng nháy tắt hẳn. Đây là cài đặt mới `timing.cube_settle` trong `config.yml`; VPS chậm thì tăng lên.
+  - Bot chỉ đọc khi hai lần nhìn liên tiếp giống nhau, và không bao giờ nhầm ô nháy trắng là đồ Common.
+  - Nếu lưới vẫn thiếu ô hoặc lẫn phẩm chất, bot lấy đồ ra và thử Auto Fill thêm một lần rồi mới bỏ qua.
+
 ## 1.0.4 · 2026-10-02
 
 [⬇ `tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe) · SHA256 `f18bd515933b0909c691d1e5c75a5f8286b412ae87f4d605fe48aff6052aeafa`
