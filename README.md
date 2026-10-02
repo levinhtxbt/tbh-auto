@@ -1,151 +1,124 @@
-# tbh-auto
+<p align="center">
+  <img src="assets/banner_en.png" alt="tbh-auto: opens chests, stores loot in the stash and sorts, for TBH: Task Bar Hero" width="100%">
+</p>
 
-Auto cho **TBH: Task Bar Hero**: tự mở rương, cất đồ từ túi vào kho và sort, để bạn treo game mà túi không bao giờ đầy.
+<p align="center">
+  <a href="https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe"><img src="https://img.shields.io/badge/version-1.0.4-2ea44f?style=flat-square" alt="version 1.0.4"></a>
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square" alt="Windows 10 | 11">
+  <img src="https://img.shields.io/badge/UI-English%20%7C%20Vietnamese-f39c12?style=flat-square" alt="UI: English | Vietnamese">
+  <img src="https://img.shields.io/badge/price-free-brightgreen?style=flat-square" alt="free">
+  <a href="https://github.com/levinhtxbt/tbh-auto/issues"><img src="https://img.shields.io/github/issues/levinhtxbt/tbh-auto?style=flat-square" alt="open issues"></a>
+</p>
 
-tbh-auto chỉ **nhìn màn hình** (chụp ảnh, nhận diện nút bằng OpenCV) và **bấm chuột như người**. Nó không đọc memory, không inject vào game, không đụng network, và chỉ *đọc* file save, không bao giờ ghi.
+<p align="center">
+  <img src="assets/flag_en.png" height="12" alt=""> <b>English</b> &nbsp;·&nbsp; <a href="README.vi.md"><img src="assets/flag_vi.png" height="12" alt=""> Tiếng Việt</a>
+</p>
 
-**Bản mới nhất: 1.0.4** (02/10/2026) · [⬇ Tải bộ cài `tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe) (~73 MB) · [Có gì mới](CHANGELOG.md)
+**tbh-auto** keeps *TBH: Task Bar Hero* tidy while you idle. It opens chests as they drop, moves the loot from your bag into the stash, and sorts both, so your bag never fills up.
 
-*English: see [below](#english).*
+It only **looks at the screen** and **clicks like a person**. It does not read game memory, inject code or touch network traffic, and it only ever *reads* the save file.
+
+<p align="center">
+  <a href="https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe"><img src="https://img.shields.io/badge/Download-tbh--auto--setup--1.0.4.exe-2ea44f?style=for-the-badge" alt="Download tbh-auto-setup-1.0.4.exe"></a>
+  <br>
+  <sub>~73 MB · Windows 10 / 11 64-bit (ARM too) · no Python, no admin rights · <a href="CHANGELOG.md">What's new</a></sub>
+</p>
 
 > [!WARNING]
-> Nhà phát triển game phạt rất nặng tài khoản dùng "chương trình trái phép" (khoá Steam Market vĩnh viễn, có thể khoá game). Bot chụp màn hình khó bị phát hiện hơn bot đọc memory, nhưng vẫn là vùng xám. Delay đều ngẫu nhiên và click có lệch vài pixel, nhưng **dùng là tự chịu rủi ro**.
+> The game's developer bans accounts that use "unauthorized programs": a permanent Steam Market ban, possibly a game ban. A bot that only reads the screen is harder to spot than one that reads memory, but it is still a grey area. **Use it at your own risk.**
 
-## Bot làm gì
+## 📸 Screenshots
 
-1. **Mở rương** khi thấy rương trên thanh taskbar của game (chuột phải). Nếu account đã học rune *Nhấn Space mở tất cả loại rương cùng lúc* và bật *Mở tất cả hộp hàng loạt* trong cài đặt game, bot bấm Space một lần để mở hết.
-2. **Cất đồ vào kho** bằng nút *Kho đồ < Túi đồ*. Tab đang mở đầy thì bot tự chuyển sang tab còn chỗ (tối đa 7 tab).
-3. **Sort** kho và túi. Cứ 3–5 phút bot cất đồ + sort một lần dù không có rương.
-4. *(Tuỳ chọn)* **Tổng hợp đồ bằng Cube**: gộp 9 món cùng phẩm chất thành 1 món cao hơn, trong giới hạn phẩm chất bạn chọn.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot_main_en.png" alt="tbh-auto main window">
+      <p align="center"><sub>Main window: party, info, stash tabs, bag and the bot's log</sub></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot_stats_en.png" alt="Hero stats">
+      <p align="center"><sub><b>ⓘ</b> on a party card: the hero's stats, as in the in-game Stat window</sub></p>
+      <br>
+      <img src="assets/screenshot_synth_en.png" alt="Cube synthesis settings">
+      <p align="center"><sub><b>Bot → Cube synthesis...</b></sub></p>
+    </td>
+  </tr>
+</table>
 
-Ngoài ra cửa sổ app cho xem đội hình, chỉ số hero (tính giống bảng chỉ số trong game), kho, túi, vàng, stage... đọc thẳng từ file save.
+## ✨ Features
 
-## Yêu cầu
+| | Feature | What it does |
+|:-:|---|---|
+| 🎁 | **Opens chests** | Right-clicks every chest that shows up on the game's taskbar. If your account has the rune that opens all chests with Space, and the open-all option is on in the game, one Space press opens them all. |
+| 📦 | **Stores the loot** | Clicks the button that moves the bag into the stash. When the open stash tab is full, it moves on to the next tab with room (up to 7 tabs). |
+| 🔃 | **Sorts** | Sorts the stash and the bag. Every 3–5 minutes it stores and sorts even if no chest dropped. |
+| ⚗️ | **Cube synthesis** | Combines 9 items of one grade into one item of a higher grade, up to the grade you allow. It never uses equipped items or items locked with **Alt+Click**, and never synthesizes Immortal or above. |
+| 🖱️ | **Use your PC meanwhile** | Before each click it waits until you leave the mouse and keyboard alone for 0.5 s. Then it clicks and puts your cursor and focus back. The cursor is away for about 0.1 s. |
+| 🔍 | **Any zoom, any language** | Detects the game's UI zoom (1x, 1.25x, 2x, 3x...) by itself and works whatever language the game is in. |
+| 🖥️ | **Remote Desktop & VMs** | Keeps running after you close Remote Desktop. When the screen cannot be captured, *blind mode* clicks the spots it recorded earlier. |
+| 📊 | **Save viewer** | Shows your party, hero stats, skills and gear, every stash tab, the bag, gold, stage and Cube level. Everything comes from the save file, and the item icons come from your installed game. |
+| 🌐 | **English & Vietnamese** | One click switches the whole UI, including item and hero names. |
+| 🐞 | **Built-in bug report** | Writes a bug report for you to post on GitHub or e-mail, with your Windows user name hidden. |
 
-- Windows 10 / 11, 64-bit. Windows 11 trên chip ARM cũng chạy được (Windows tự giả lập x64).
-- Đã cài game *TBH: Task Bar Hero* (Steam).
-- **Không** cần Python, **không** cần quyền admin.
+## 🧭 Menus
 
-## Cài đặt
+**Toolbar:** **▶ Start bot** · **🔍 Scan buttons** · **■ Stop**, plus the **VI | EN** language switch at the top right.
+**Status dot** (bottom right, and on the app icon): grey = not running · orange = preparing, scanning or waiting for the screen · green = running · red = error, see the log.
 
-1. Tải [`tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe).
-2. Chạy file. Exe chưa được ký nên Windows SmartScreen có thể hiện *"Windows protected your PC"*: bấm **More info → Run anyway**.
-3. Trong bộ cài:
-   - **Thư mục cài**: để mặc định `%LOCALAPPDATA%\Programs\tbh-auto`, hoặc chọn thư mục khác như `C:\tbh-auto`. Không chọn được `Program Files`, vì app ghi cài đặt và log ngay cạnh nó.
-   - Tick **Create a desktop shortcut** nếu muốn icon ngoài Desktop.
-   - Tick **Get item icons & hero names from the installed game** (nên tick): sau khi cài, app đọc icon đồ, chân dung và tên hero từ game đã cài trên máy (chỉ đọc, không sửa file game).
-4. Bấm **Finish** để mở tbh-auto. Lần sau mở từ Start menu hoặc Desktop.
+| Menu | Item | What it does |
+|---|---|---|
+| **Bot** | Start bot | Brings the game to the front, scans the buttons, then runs: chests → stash → sort. |
+| | Scan buttons | Only the scan: finds the UI zoom and every button, and writes the result to the log. A missing button gets an orange warning. |
+| | Stop | Stops after the current cycle. You can also stop the bot by moving the mouse into the top-left corner of the screen. |
+| | Dry run (log only, no clicks) | Logs what the bot would click, without clicking. |
+| | Blind mode (no screen capture) | Clicks the spots recorded by earlier scans and checks the result in the save file. Turns on by itself when the screen is lost. |
+| | Put the cursor back after each click | On by default. Lets you keep using the PC while the bot runs. |
+| | Show recorded spots (blind mode) | Lists the spots that blind mode will click. |
+| | Cube synthesis... | Sets the highest grade, the item groups (Gear / Accessory / Material), whether to use stash items, sets per run and how often to run. Also shows what your save allows right now. |
+| **View** | Party & info · Stash · Bag | Shows or hides each panel. |
+| | Item names in cells | Shows item names inside the cells, which makes the window about twice as wide. Without it, cells show the icon with the count or level, like in the game. Click any cell for details. |
+| **Save file** | Save file settings... | Sets the save file path (found automatically) and how often to check it. |
+| | Reload now `F5` | Reads the save file again. |
+| **Tools** | Get icons & names from the game | Reads item icons, hero portraits, names and the data tables for hero stats from your installed game. It only reads and changes nothing. Run it again after a game update. |
+| | Remote Desktop › Keep the bot running when Remote Desktop closes | Asks for admin rights once. After that, closing Remote Desktop hands the session over to the PC's own screen, so the bot keeps going. |
+| | Remote Desktop › Close Remote Desktop now, keep the bot running | Does the same handover right away. |
+| **Logs** | Clear log · Open log file · Auto-scroll · Verbose (DEBUG) | Controls the log panel. The log is always in English. |
+| **Help** | Report an issue... | Fills in a report with the versions, screen, bot state and the last 80 log lines. You then open a GitHub issue or send an e-mail yourself; nothing is sent automatically. |
+| | About... · Donate... | |
 
-Kiểm tra file tải về có đúng không (tuỳ chọn), trong PowerShell:
+## 🚀 How to use
+
+1. **Install.** Download [`tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe) and run it.
+   - If SmartScreen says *Windows protected your PC*, click **More info → Run anyway**. The exe is not code-signed.
+   - Keep the default install folder, or pick one like `C:\tbh-auto`. Program Files is not allowed.
+   - Tick **Get item icons & hero names from the installed game**.
+2. **Open the game windows.** In the game, open the **Stash** window, and the **Hero** window on its **Bag** tab. Both must be visible on screen.
+3. **Scan.** Open tbh-auto and click **🔍 Scan buttons**. The log shows the UI zoom and every button found. If a line is orange, the window it needs is usually closed or covered.
+4. **Run.** Click **▶ Start bot**; the status dot turns green. To stop, click **■ Stop** or move the mouse into the top-left corner of the screen.
+
+**To update**, run the newer installer over the old one. It keeps `config.yml` and your settings. **To uninstall**, go to *Settings → Apps → Installed apps → tbh-auto*. Advanced settings (delays, the Hero window hotkey, turning features on or off) are in `config.yml` in the install folder, and every line in it is commented.
+
+> [!NOTE]
+> On a PC with **Smart App Control** turned on (common on fresh Windows 11 installs), Windows blocks unsigned programs outright: *"An Application Control policy has blocked this file"*. There is no Run anyway button in that case.
+
+<details>
+<summary>Check the download (SHA256)</summary>
 
 ```powershell
 Get-FileHash .\tbh-auto-setup-1.0.4.exe -Algorithm SHA256
+# f18bd515933b0909c691d1e5c75a5f8286b412ae87f4d605fe48aff6052aeafa
 ```
 
-Kết quả phải là `f18bd515933b0909c691d1e5c75a5f8286b412ae87f4d605fe48aff6052aeafa`.
+</details>
 
-### Cập nhật lên bản mới
+## 💬 Feedback & support
 
-Tải bộ cài bản mới và chạy đè lên bản cũ. Không cần gỡ trước. `config.yml`, cài đặt cửa sổ, vị trí chế độ mù và log được giữ nguyên. Nếu tbh-auto đang mở, bộ cài sẽ đóng nó trước khi thay file.
+- 🐞 **Found a bug or have an idea?** Use **Help → Report an issue...** in the app, or [open an issue](https://github.com/levinhtxbt/tbh-auto/issues).
+- ☕ **Like it?** [Buy me a coffee](https://buymeacoffee.com/levinhtxbt).
+- 📝 **What changed:** see the [changelog](CHANGELOG.md).
 
-### Gỡ cài đặt
-
-**Settings → Apps → Installed apps → tbh-auto → Uninstall.** Thao tác này xoá file đã cài và những file app tự tạo (icons, log, cài đặt). File save của game không bị đụng tới.
-
-## Chạy lần đầu
-
-1. **Mở game.** Mở cửa sổ **Kho đồ** (Stash) và cửa sổ **Hero** ở tab **Túi đồ** (Bag), để cả hai cùng hiện trên màn hình. Bot cần thấy nút *Kho đồ < Túi đồ* và các nút sort.
-2. **Mở tbh-auto.** App tự tìm file save của game và hiện đội hình, kho, túi.
-   Nếu lúc cài bạn không tick lấy icon: vào **Công cụ → Lấy icon & tên từ game**.
-3. Bấm **🔍 Dò nút**. Bot đưa game lên trên, dò tỉ lệ UI (zoom 1x, 2x, 3x...) và tìm từng nút, rồi ghi kết quả ra khung Log. Nút nào không thấy sẽ có dòng cảnh báo màu cam.
-4. *(Tuỳ chọn)* Tick **Bot → Dry-run** rồi Chạy bot để xem bot *định* bấm gì mà không bấm thật.
-5. Bấm **▶ Chạy bot**. Chấm trạng thái ở góc dưới chuyển sang **xanh** là bot đang chạy.
-6. Dừng bằng **■ Dừng**, hoặc kéo chuột vào **góc trên bên trái** màn hình (dừng khẩn cấp).
-
-Màu chấm trạng thái (cả trên icon app): xám = chưa chạy · cam = đang chuẩn bị / dò nút / chờ màn hình · xanh = đang chạy · đỏ = lỗi, xem log.
-
-Nút **🇻🇳 VI | 🇬🇧 EN** ở góc trên bên phải đổi ngôn ngữ giao diện và tên đồ / hero. Log luôn bằng tiếng Anh.
-
-## Dùng hằng ngày
-
-| Muốn... | Làm thế này |
-|---|---|
-| Vẫn dùng máy trong lúc bot chạy | **Bot → Trả chuột về chỗ cũ sau mỗi click** (mặc định bật). Bot đợi bạn ngừng dùng chuột / bàn phím 0,5 giây, click, rồi trả chuột và focus về cửa sổ bạn đang dùng. Mỗi click chuột chỉ rời chỗ khoảng 0,1 giây. |
-| Tự tổng hợp đồ bằng Cube | **Bot → Tổng hợp đồ (Cube)...**: chọn phẩm chất tối đa, loại đồ, có lấy đồ trong kho không, bao lâu một lượt. Hộp thoại xem trước số bộ 9 món đủ điều kiện. Đồ đang mặc và đồ khoá bằng **Alt+Click** trong game không bao giờ bị dùng. |
-| Treo bot trên máy khác qua Remote Desktop | **Công cụ → Remote Desktop → Giữ bot chạy khi đóng Remote Desktop**. Windows hỏi quyền admin một lần. Từ đó bấm X đóng RDP thì bot vẫn chạy. Chỉ muốn *thu nhỏ* cửa sổ RDP: chạy `rdp_client_keep_rendering.bat` (trong thư mục cài) trên **máy bạn đang ngồi**, rồi kết nối lại. |
-| Xem chỉ số hero | Click **ⓘ** trên thẻ hero ở khung Đội hình. Click chân dung để xem cây năng lực, kỹ năng, đồ đang mặc. |
-| Hiện tên đồ ngay trong ô kho / túi | **Hiển thị → Tên đồ trong ô** (cửa sổ rộng gần gấp đôi). Mặc định chỉ hiện icon + số lượng / cấp như trong game; click ô để xem chi tiết. |
-| File save ở chỗ khác | **File save → Cài đặt file save...** Mặc định: `%USERPROFILE%\AppData\LocalLow\TesseractStudio\TaskBarHero\SaveFile_Live.es3`. |
-| Xem bot đã làm gì | Khung Log, hoặc **Logs → Mở file log** (`tbh-auto.log` trong thư mục cài). **Logs → Chi tiết (DEBUG)** để log kỹ hơn. |
-
-Cấu hình chi tiết (delay, phím mở Hero, bật / tắt từng tính năng...) nằm trong `config.yml` ở thư mục cài, mỗi dòng đều có chú thích. Sửa xong thì mở lại app.
-
-### Thư mục cài có gì
-
-| File | Là gì |
-|---|---|
-| `tbh-auto-gui.exe` | app (mở từ Start menu / Desktop) |
-| `tbh-auto.exe` | bản dòng lệnh, chạy trong terminal: `tbh-auto.exe --help` |
-| `config.yml` | cấu hình, sửa được; cập nhật bản mới vẫn giữ |
-| `templates\` | ảnh mẫu các nút mà bot tìm trên màn hình |
-| `icons\` | icon, tên và bảng dữ liệu lấy từ game của bạn |
-| `tbh-auto.log` | log |
-| `rdp_client_keep_rendering.bat` | cho phép thu nhỏ cửa sổ Remote Desktop mà bot vẫn chạy (chạy trên máy client) |
-| `README.md` | tài liệu đầy đủ (mọi tuỳ chọn, cách nhận diện, dòng lệnh) |
-
-## Xử lý sự cố
-
-**Windows không cho chạy bộ cài / app.**
-- SmartScreen: **More info → Run anyway**.
-- Windows Defender cảnh báo: exe đóng gói bằng PyInstaller hay bị báo nhầm. Thêm thư mục cài vào danh sách loại trừ (Windows Security → Virus & threat protection → Exclusions) nếu bạn tin file này.
-- *"An Application Control policy has blocked this file"*: máy bật **Smart App Control** (thường gặp ở Windows 11 cài mới). Smart App Control chặn mọi exe chưa ký và không có nút Run anyway. Muốn chạy thì phải tắt Smart App Control (Windows Security → App & browser control → Smart App Control). Lưu ý: trên một số bản Windows, tắt rồi phải cài lại Windows mới bật lại được.
-
-**Dò nút báo không thấy nút.**
-- Kho đồ và Hero (tab Túi đồ) phải *cùng hiện* trên màn hình, không bị cửa sổ khác che.
-- Cửa sổ game ở zoom 1x cao khoảng 890 px. Màn hình thấp hơn thì giảm zoom trong game.
-- Chạy lại **Dò nút** sau khi đổi zoom hoặc đổi độ phân giải.
-
-**Bot dừng hoặc báo "chờ màn hình" khi dùng Remote Desktop.** Thu nhỏ hoặc đóng RDP làm Windows ngừng vẽ màn hình, nên bot không thấy gì để bấm. Xem dòng Remote Desktop trong bảng ở trên. Màn hình khoá / screen saver có mật khẩu cũng gây ra lỗi này.
-
-**Không có icon đồ / tên hero.** Chạy **Công cụ → Lấy icon & tên từ game**. Nên chạy lại sau mỗi lần game cập nhật.
-
-## Báo lỗi / góp ý
-
-Trong app: **Trợ giúp → Báo lỗi / góp ý...** Viết vài dòng mô tả. App tự điền sẵn phiên bản, Windows, màn hình, trạng thái bot và 80 dòng log cuối (tên user Windows đã được ẩn). Sau đó bấm **Báo lên GitHub** hoặc **✉ Gửi email**. App không tự gửi gì, bạn xem lại rồi mới bấm gửi.
-
-Hoặc mở issue trực tiếp: <https://github.com/levinhtxbt/tbh-auto/issues>.
-
-## Ủng hộ
-
-Nếu tool giúp được bạn: [☕ Buy Me a Coffee](https://buymeacoffee.com/levinhtxbt) (hoặc **Trợ giúp → Ủng hộ** trong app).
-
----
-
-## English
-
-**tbh-auto** opens chests, moves items from the bag to the stash and sorts both for *TBH: Task Bar Hero*, so you can leave the game running and never fill your bag. It only looks at the screen and moves the mouse like a person. It never reads game memory, injects code or touches network traffic, and it only *reads* the save file.
-
-> [!WARNING]
-> The developer bans accounts that use "unauthorized programs" (permanent Steam Market ban, possibly a game ban). Use it at your own risk.
-
-**Install**
-
-1. Download [`tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe). You need Windows 10 / 11 64-bit (Windows 11 on ARM works too) and the game installed. You don't need Python or admin rights.
-2. Run it. If SmartScreen appears, click **More info → Run anyway**: the exe is not code-signed.
-3. Keep the default folder or pick one like `C:\tbh-auto`; Program Files is not allowed. Tick **Get item icons & hero names from the installed game**.
-4. To update later, run the newer installer over the old one. Your `config.yml` and settings are kept. To uninstall, go to **Settings → Apps → tbh-auto → Uninstall**.
-
-**First run**
-
-1. Start the game. Open the **Stash** window and the **Hero** window on the **Bag** tab, both visible on screen.
-2. Open tbh-auto and switch the UI to **🇬🇧 EN** (top right).
-3. Click **🔍 Scan buttons** and check the log for orange warnings.
-4. Click **▶ Start bot**. To stop it, click **■ Stop**, or move the mouse to the top-left corner of the screen.
-
-**Useful options**
-
-- **Bot → Put the cursor back after each click** (on by default): you can keep using the PC while the bot runs.
-- **Bot → Cube synthesis...**: combines 9 items of the same grade into one of a higher grade, up to the grade you choose.
-- **Tools → Remote Desktop → Keep the bot running when Remote Desktop closes**: keeps the bot running on a remote PC after you close Remote Desktop.
-
-**Problems or ideas?** In the app, use **Help → Report an issue...**, or [open an issue](https://github.com/levinhtxbt/tbh-auto/issues).
+<p align="center">
+  <img src="assets/icon.png" width="48" alt="tbh-auto icon">
+  <br>
+  <sub>Made by Vinh Le · not affiliated with the developer of TBH: Task Bar Hero</sub>
+</p>
