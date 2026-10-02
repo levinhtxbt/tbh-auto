@@ -1,0 +1,3 @@
+# installers are attached to GitHub Releases, never committed
+*.exe
+installers/

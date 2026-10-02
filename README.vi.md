@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/phi%C3%AAn%20b%E1%BA%A3n-1.0.5-2ea44f?style=flat-square" alt="phiên bản 1.0.5"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/phi%C3%AAn%20b%E1%BA%A3n-1.0.5-2ea44f?style=flat-square" alt="phiên bản 1.0.5"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square" alt="Windows 10 | 11">
   <img src="https://img.shields.io/badge/giao%20di%E1%BB%87n-Ti%E1%BA%BFng%20Vi%E1%BB%87t%20%7C%20English-f39c12?style=flat-square" alt="Giao diện: Tiếng Việt | English">
   <img src="https://img.shields.io/badge/gi%C3%A1-mi%E1%BB%85n%20ph%C3%AD-brightgreen?style=flat-square" alt="miễn phí">
@@ -19,9 +19,9 @@
 Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không đọc memory, không inject vào game, không đụng network, và chỉ *đọc* file save, không bao giờ ghi.
 
 <p align="center">
-  <a href="https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-tbh--auto--setup--1.0.5.exe-2ea44f?style=for-the-badge" alt="Tải về tbh-auto-setup-1.0.5.exe"></a>
+  <a href="https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe"><img src="https://img.shields.io/badge/T%E1%BA%A3i%20v%E1%BB%81-tbh--auto--setup--1.0.5.exe-2ea44f?style=for-the-badge" alt="Tải về tbh-auto-setup-1.0.5.exe"></a>
   <br>
-  <sub>~73 MB · Windows 10 / 11 64-bit (cả máy ARM) · không cần Python, không cần quyền admin · <a href="CHANGELOG.md">Có gì mới</a></sub>
+  <sub>~73 MB · Windows 10 / 11 64-bit (cả máy ARM) · không cần Python, không cần quyền admin · <a href="CHANGELOG.md">Có gì mới</a> · <a href="https://github.com/levinhtxbt/tbh-auto/releases">Releases</a></sub>
 </p>
 
 > [!WARNING]
@@ -88,7 +88,7 @@ Tool chỉ **nhìn màn hình** và **bấm chuột như người**. Tool không
 
 ## 🚀 Cách sử dụng
 
-1. **Cài đặt.** Tải [`tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.5.exe) rồi chạy.
+1. **Cài đặt.** Tải [`tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe) rồi chạy.
    - Nếu SmartScreen hiện *Windows protected your PC*, bấm **More info → Run anyway**. Exe chưa được ký số.
    - Giữ thư mục cài mặc định, hoặc chọn thư mục khác như `C:\tbh-auto`. Không chọn được Program Files.
    - Tick **Get item icons & hero names from the installed game**.

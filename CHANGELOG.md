@@ -2,12 +2,12 @@
 
 # Changelog · Lịch sử phiên bản
 
-Only the latest installer is kept in [`installers/`](installers/). To update, run it over the old version; your settings are kept.
-Chỉ bộ cài bản mới nhất được giữ trong [`installers/`](installers/). Muốn cập nhật thì chạy nó đè lên bản cũ; cài đặt được giữ nguyên.
+Installers are attached to each [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). To update, run the newer one over your version; your settings are kept.
+Bộ cài được đính kèm trong từng [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). Muốn cập nhật thì chạy bộ cài mới đè lên bản đang dùng; cài đặt được giữ nguyên.
 
 ## 1.0.5 · 2026-10-02
 
-[⬇ `tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.5.exe) · SHA256 `0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570`
+[⬇ `tbh-auto-setup-1.0.5.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.5/tbh-auto-setup-1.0.5.exe) · SHA256 `0115d9dd4a8a7fddff26e477a4998b389226d77ccd6461f329bf6456a60c0570`
 
 ### <img src="assets/flag_en.png" height="12" alt=""> English
 
