@@ -2,8 +2,8 @@
 
 # Changelog · Lịch sử phiên bản
 
-Installers for every version are in [`installers/`](installers/). To update, run the newer installer over the old one; your settings are kept.
-Bộ cài từng phiên bản nằm trong [`installers/`](installers/). Muốn cập nhật thì chạy bộ cài mới đè lên bản cũ; cài đặt được giữ nguyên.
+Only the latest installer is kept in [`installers/`](installers/). To update, run it over the old version; your settings are kept.
+Chỉ bộ cài bản mới nhất được giữ trong [`installers/`](installers/). Muốn cập nhật thì chạy nó đè lên bản cũ; cài đặt được giữ nguyên.
 
 ## 1.0.5 · 2026-10-02
 
@@ -28,8 +28,6 @@ Bộ cài từng phiên bản nằm trong [`installers/`](installers/). Muốn c
   - Nếu lưới vẫn thiếu ô hoặc lẫn phẩm chất, bot lấy đồ ra và thử Auto Fill thêm một lần rồi mới bỏ qua.
 
 ## 1.0.4 · 2026-10-02
-
-[⬇ `tbh-auto-setup-1.0.4.exe`](https://github.com/levinhtxbt/tbh-auto/raw/main/installers/tbh-auto-setup-1.0.4.exe) · SHA256 `f18bd515933b0909c691d1e5c75a5f8286b412ae87f4d605fe48aff6052aeafa`
 
 ### <img src="assets/flag_en.png" height="12" alt=""> English
 
