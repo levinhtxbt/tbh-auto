@@ -5,6 +5,32 @@
 Installers are attached to each [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). To update, run the newer one over your version; your settings are kept.
 Bộ cài được đính kèm trong từng [GitHub Release](https://github.com/levinhtxbt/tbh-auto/releases). Muốn cập nhật thì chạy bộ cài mới đè lên bản đang dùng; cài đặt được giữ nguyên.
 
+## 1.0.8 · 2026-10-03
+
+[⬇ `tbh-auto-setup-1.0.8.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.8/tbh-auto-setup-1.0.8.exe) · SHA256 `6af5152c033ba475c83fd0720ce1a8a78a7ef36131eb01fb054786ed73a173f0`
+
+### <img src="assets/flag_en.png" height="12" alt=""> English
+
+**Fixed**
+
+- 🖥️ **The game window no longer stays blown up after Remote Desktop reconnects.** When the Remote Desktop window was minimised, or the session moved to a VPS console (often 1024x768), the screen was smaller than the game for a moment. The game window then grew as wide as the next screen: its UI 2 to 3.5 times bigger, its top off the screen, and the bot (blind mode too) clicking in the wrong places. Now the bot:
+  - notes the size of the game window when it starts;
+  - puts the window back to that size whenever it is bigger than the screen, then finds the buttons again. It checks every round, when the screen comes back, and before each blind-mode run;
+  - leaves the window alone if you change the zoom in the game and it still fits on the screen, or if the screen is smaller than the game itself (a 1024x768 console).
+
+  If the game is already blown up when you start the bot, set its zoom back in the game first.
+
+### <img src="assets/flag_vi.png" height="12" alt=""> Tiếng Việt
+
+**Sửa**
+
+- 🖥️ **Cửa sổ game không còn bị phóng to sau khi kết nối lại Remote Desktop.** Khi thu nhỏ cửa sổ Remote Desktop, hoặc phiên chuyển sang console của VPS (thường là 1024x768), có lúc màn hình nhỏ hơn cửa sổ game. Sau đó cửa sổ game giãn rộng bằng màn hình kế tiếp: UI to gấp 2 đến 3,5 lần, phần trên tràn khỏi mép màn hình, và bot (cả chế độ mù) bấm sai chỗ. Giờ bot:
+  - ghi nhớ kích thước cửa sổ game lúc bắt đầu chạy;
+  - đưa cửa sổ về lại kích thước đó mỗi khi nó to hơn màn hình, rồi dò lại các nút. Bot kiểm tra mỗi vòng, khi màn hình quay lại, và trước mỗi lượt chạy mù;
+  - không đụng tới cửa sổ nếu bạn tự đổi zoom trong game mà cửa sổ vẫn nằm gọn trong màn hình, hoặc nếu màn hình nhỏ hơn chính cửa sổ game (console 1024x768).
+
+  Nếu lúc chạy bot game đã bị phóng to sẵn, hãy chỉnh lại zoom trong game trước.
+
 ## 1.0.7 · 2026-10-02
 
 [⬇ `tbh-auto-setup-1.0.7.exe`](https://github.com/levinhtxbt/tbh-auto/releases/download/v1.0.7/tbh-auto-setup-1.0.7.exe) · SHA256 `9e096275b8aef28a7e08e669b5eb3240832229bd730411ba20574b5d5e5a138d`
